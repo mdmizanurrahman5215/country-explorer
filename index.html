@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Country Explorer</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <section id="main-container">
-        <h1>Movie Explorer</h1>
-        <div>
-            <input type="text" placeholder="Search Country here">
-            <button>Search</button>
+<body class="bg-gray-900 text-white">
+    <section id="main-container" class="container mx-auto text-center py-20">
+        <h1 class="text-3xl font-bold mb-4">Movie Explorer</h1>
+        <div class="mb-4">
+            <input type="text" placeholder="Search Country here" class="border px-4 py-2 rounded-md outline-none">
+            <button class=" px-4 py-2 ml-2 rounded-md bg-blue-600 cursor-pointer hover:bg-blue-800 active:scale-95 transition-transform duration-75" >Search</button>
         </div>
-        <p>Loading</p>
-        <p>Failed to load country ! please try again</p>
+        <h1 id="loading" class="text-4xl hidden">Loading...</h1>
+        <h1 id="error" class="text-4xl hidden">Failed to load country ! please try again</h1>
         <div id="country-container">
 
         </div>
@@ -22,5 +23,7 @@
         </div>
 
     </section>
+
+    <script src="./script/index.js"></script>
 </body>
 </html>
